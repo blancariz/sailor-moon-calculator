@@ -1,0 +1,89 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  margin-top: -700px;
+  max-width: 100%;
+  max-height: auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #f3d076, #ff9100, #d966a7, #bf0c21, #2a7a1c, #2712de, #eb811d);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1.5px solid #9e7426;
+  outline: none;
+  background-color: #f3d076;
+}
+
+.calculator-grid > button:hover {
+  background-color: #ffff;
+}
+
+.calculator-grid .del-button {
+  background-color: #d966a7;
+}
+
+.calculator-grid .div-button {
+  background-color: #bf0c21;
+}
+
+.calculator-grid .mult-button {
+  background-color: #2a7a1c;
+}
+
+.calculator-grid .add-button {
+  background-color: #2712de;
+}
+
+.calculator-grid .sub-button {
+  background-color: #eb811d;
+}
+
+.calculator-grid .span-two {
+  background-color: #d966a7;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: #f3d076;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: #9e7426;
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: #000;
+  font-size: 2.5rem;
+}
